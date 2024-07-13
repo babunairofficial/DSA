@@ -25,25 +25,38 @@ public class PracticeQuestion1 {
         // System.out.println("area of square is "+area);
 
         //Question 3
-        System.out.println("enter cost of pencil");
-        float pencil = sc.nextFloat();
-        System.out.println("enter cost of pen");
-        float pen = sc.nextFloat();
-        System.out.println("enter cost of eraser");
-        float eraser = sc.nextFloat();
+        // System.out.println("enter cost of pencil");
+        // float pencil = sc.nextFloat();
+        // System.out.println("enter cost of pen");
+        // float pen = sc.nextFloat();
+        // System.out.println("enter cost of eraser");
+        // float eraser = sc.nextFloat();
 
-        float totalCost = pencil + pen + eraser;
-        float tax = totalCost * 0.18f;
-        float finalCost = totalCost + tax;
+        // float totalCost = pencil + pen + eraser;
+        // float tax = totalCost * 0.18f;
+        // float finalCost = totalCost + tax;
 
-        System.out.println("Cost of Pencil = "+pencil);
-        System.out.println("Cost of Pen = "+pen);
-        System.out.println("Cost of Eraser = "+eraser);
-        System.out.println("--------------------------------------------------------------------");
-        System.out.println("Toal Cost = "+totalCost);
-        System.out.println("Tax at 18% = "+tax);
-        System.out.println("Final Cost = "+finalCost);
-        System.out.println("You Need to pay Rupees "+finalCost+" . Thank you!");
+        // System.out.println("Cost of Pencil = "+pencil);
+        // System.out.println("Cost of Pen = "+pen);
+        // System.out.println("Cost of Eraser = "+eraser);
+        // System.out.println("--------------------------------------------------------------------");
+        // System.out.println("Toal Cost = "+totalCost);
+        // System.out.println("Tax at 18% = "+tax);
+        // System.out.println("Final Cost = "+finalCost);
+        // System.out.println("You Need to pay Rupees "+finalCost+" . Thank you!");
+        
+        //Question 4
+        byte b = 4;
+        char c = 'a';
+        short s = 512;
+        int i = 1000;
+        float f = 3.14f;
+        double d = 99.9954;
+
+        double result = (f * b) + (i % c) - (d * s);
+
+        System.out.println(result);
+
         sc.close();
     }
 }
