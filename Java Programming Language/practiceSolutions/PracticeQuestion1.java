@@ -46,17 +46,20 @@ public class PracticeQuestion1 {
         // System.out.println("You Need to pay Rupees "+finalCost+" . Thank you!");
         
         //Question 4
-        byte b = 4;
-        char c = 'a';
-        short s = 512;
-        int i = 1000;
-        float f = 3.14f;
-        double d = 99.9954;
+        // byte b = 4;
+        // char c = 'a';
+        // short s = 512;
+        // int i = 1000;
+        // float f = 3.14f;
+        // double d = 99.9954;
 
-        double result = (f * b) + (i % c) - (d * s);
+        // double result = (f * b) + (i % c) - (d * s);
 
-        System.out.println(result);
+        // System.out.println(result);
 
+        //Question 5
+        int $ = 24; //variables are known as identifiers
+        System.out.println("no error "+$);
         sc.close();
     }
 }
