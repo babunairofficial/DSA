@@ -59,6 +59,7 @@ public class PracticeQuestion1 {
 
         //Question 5
         int $ = 24; //variables are known as identifiers
+        //identifiers can start with '-' and '$'
         System.out.println("no error "+$);
         sc.close();
     }
