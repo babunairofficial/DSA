@@ -4,11 +4,16 @@ public class JavaBasicsOperators {
         int B = 5;
         
         //Arithmetic operators
-        System.out.println("add = "+(A+B));
-        System.out.println("Subtract = "+(A-B));
-        System.out.println("multiply = "+(A*B));
-        System.out.println("divide = "+(A/B));
-        System.out.println("modulo(remainder) = "+(A%B));
+        // System.out.println("add = "+(A+B));
+        // System.out.println("Subtract = "+(A-B));
+        // System.out.println("multiply = "+(A*B));
+        // System.out.println("divide = "+(A/B));
+        // System.out.println("modulo(remainder) = "+(A%B));
 
+        //unary operator
+        int C = A++;
+        int D = --B;
+        System.out.println("increment "+C);
+        System.out.println("decrement "+D);
     }
 }
