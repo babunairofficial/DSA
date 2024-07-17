@@ -11,9 +11,17 @@ public class JavaBasicsOperators {
         // System.out.println("modulo(remainder) = "+(A%B));
 
         //unary operator
-        int C = A++;
-        int D = --B;
-        System.out.println("increment "+C);
-        System.out.println("decrement "+D);
+        // int C = A++;
+        // int D = --B;
+        // System.out.println("increment "+C);
+        // System.out.println("decrement "+D);
+
+        //relational operator
+        System.out.println("Equals to : " + (A == B));
+        System.out.println("Not Equals to : " + (A != B));
+        System.out.println("Greater than : " + (A > B));
+        System.out.println("Lesser than : " + (A < B));
+        System.out.println("Greater than or equal to : " + (A >= B));
+        System.out.println("Lesser than or equal to : f" + (A <= B));
     }
 }
