@@ -26,8 +26,15 @@ public class JavaBasicsOperators {
         // System.out.println("Lesser than or equal to : f" + (A <= B));
 
         //logical operators
-        System.out.println((3<2) && (5<0));
-        System.out.println((3>2) || (5>0));
-        System.out.println(!(0>5));
+        // System.out.println((3<2) && (5<0));
+        // System.out.println((3>2) || (5>0));
+        // System.out.println(!(0>5));
+
+        int A = 10;
+        A +=10; //increment by 10
+        int B = 5;
+        B *=5; //multiplied by 5
+        System.out.println(A);
+        System.out.println(B);
     }
 }
