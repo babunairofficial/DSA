@@ -24,12 +24,24 @@ public class JavaBasicsConditionalStatements {
         // }
 
         //print if a number is odd or even
-        int x = 5;
-        if(x%2==0){
-            System.out.println("even");
+        // int x = 5;
+        // if(x%2==0){
+        //     System.out.println("even");
+        // }
+        // else{
+        //     System.out.println("odd");
+        // }
+
+        //else if
+        int age = 13;
+        if(age >= 18){
+            System.out.println("adult");
         }
-        else{
-            System.out.println("odd");
+        else if(age >=13 && age <18){
+            System.out.println("teenager");
+        }
+        else {
+            System.out.println("child");
         }
     }
 }
