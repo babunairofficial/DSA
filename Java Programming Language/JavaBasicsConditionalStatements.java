@@ -1,3 +1,4 @@
+import java.util.*;
 public class JavaBasicsConditionalStatements {
     public static void main(String[] args) {
         // int age = 16;
@@ -33,15 +34,33 @@ public class JavaBasicsConditionalStatements {
         // }
 
         //else if
-        int age = 13;
-        if(age >= 18){
-            System.out.println("adult");
+        // int age = 13;
+        // if(age >= 18){
+        //     System.out.println("adult");
+        // }
+        // else if(age >=13 && age <18){
+        //     System.out.println("teenager");
+        // }
+        // else {
+        //     System.out.println("child");
+        // }
+
+        //income tax calculator
+        System.out.println("enter your salary");
+        @SuppressWarnings("resource")
+        Scanner sc =new Scanner(System.in);
+        int income = sc.nextInt();
+        int tax;
+
+        if(income <500000){
+            tax = 0;
         }
-        else if(age >=13 && age <18){
-            System.out.println("teenager");
+        else if(income >=500000 && income < 1000000){
+            tax = (int) (income * 0.2);
         }
         else {
-            System.out.println("child");
+            tax = (int) (income * 0.3);
         }
+        System.out.println("your tax is : "+tax);
     }
 }
