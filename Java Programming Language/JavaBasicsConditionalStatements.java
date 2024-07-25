@@ -46,21 +46,46 @@ public class JavaBasicsConditionalStatements {
         // }
 
         //income tax calculator
-        System.out.println("enter your salary");
-        @SuppressWarnings("resource")
-        Scanner sc =new Scanner(System.in);
-        int income = sc.nextInt();
-        int tax;
+        // System.out.println("enter your salary");
+        // @SuppressWarnings("resource")
+        // Scanner sc =new Scanner(System.in);
+        // int income = sc.nextInt();
+        // int tax;
 
-        if(income <500000){
-            tax = 0;
+        // if(income <500000){
+        //     tax = 0;
+        // }
+        // else if(income >=500000 && income < 1000000){
+        //     tax = (int) (income * 0.2);
+        // }
+        // else {
+        //     tax = (int) (income * 0.3);
+        // }
+        // System.out.println("your tax is : "+tax);
+
+        //print largest of 3 numbers
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a number");
+        int a = sc.nextInt();
+        System.out.println("enter 2nd number");
+        int b = sc.nextInt();
+        System.out.println("enter 3rd number");
+        int c = sc.nextInt();
+
+        if(a>b){
+            if(a>c){
+                System.out.println(a+" is largest");
+            } else {
+                System.out.println(c+" is largest");
+            }            
+        } else{
+            if(b>c){
+                System.out.println(b+" is largest");
+            } else{
+                System.out.println(c+" is largest");
+            }
         }
-        else if(income >=500000 && income < 1000000){
-            tax = (int) (income * 0.2);
-        }
-        else {
-            tax = (int) (income * 0.3);
-        }
-        System.out.println("your tax is : "+tax);
+        sc.close();
     }
 }
