@@ -73,18 +73,28 @@ public class JavaBasicsConditionalStatements {
         System.out.println("enter 3rd number");
         int c = sc.nextInt();
 
-        if(a>b){
-            if(a>c){
-                System.out.println(a+" is largest");
-            } else {
-                System.out.println(c+" is largest");
-            }            
-        } else{
-            if(b>c){
-                System.out.println(b+" is largest");
-            } else{
-                System.out.println(c+" is largest");
-            }
+        // if(a>b){
+        //     if(a>c){
+        //         System.out.println(a+" is largest");
+        //     } else {
+        //         System.out.println(c+" is largest");
+        //     }            
+        // } else{
+        //     if(b>c){
+        //         System.out.println(b+" is largest");
+        //     } else{
+        //         System.out.println(c+" is largest");
+        //     }
+        // }
+
+        if(a>=b && b>=c){
+            System.out.println(a+" is largest");
+        }
+        else if(b>=c){
+            System.out.println(b+" is largest");
+        }
+        else{
+            System.out.println(c+" is largest");
         }
         sc.close();
     }
