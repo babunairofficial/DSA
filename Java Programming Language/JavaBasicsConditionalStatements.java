@@ -66,12 +66,12 @@ public class JavaBasicsConditionalStatements {
         //print largest of 3 numbers
         
         Scanner sc = new Scanner(System.in);
-        System.out.println("enter a number");
-        int a = sc.nextInt();
-        System.out.println("enter 2nd number");
-        int b = sc.nextInt();
-        System.out.println("enter 3rd number");
-        int c = sc.nextInt();
+        // System.out.println("enter a number");
+        // int a = sc.nextInt();
+        // System.out.println("enter 2nd number");
+        // int b = sc.nextInt();
+        // System.out.println("enter 3rd number");
+        // int c = sc.nextInt();
 
         // if(a>b){
         //     if(a>c){
@@ -87,15 +87,22 @@ public class JavaBasicsConditionalStatements {
         //     }
         // }
 
-        if(a>=b && b>=c){
-            System.out.println(a+" is largest");
-        }
-        else if(b>=c){
-            System.out.println(b+" is largest");
-        }
-        else{
-            System.out.println(c+" is largest");
-        }
+        // if(a>=b && b>=c){
+        //     System.out.println(a+" is largest");
+        // }
+        // else if(b>=c){
+        //     System.out.println(b+" is largest");
+        // }
+        // else{
+        //     System.out.println(c+" is largest");
+        // }
+
+        //ternary operator
+        System.out.println("enter a number");
+        int number = sc.nextInt();
+        String type =((number%2) == 0) ? "even" : "odd";
+        System.out.println(type);
+
         sc.close();
     }
 }
