@@ -110,17 +110,38 @@ public class JavaBasicsConditionalStatements {
         // System.out.println(reportCard);
 
         //switch statement
-        System.out.println("enter a button number");
-        int number = sc.nextInt();
-        switch(number){
-            case 1:System.out.println("samosa");
+        // System.out.println("enter a button number");
+        // int number = sc.nextInt();
+        // switch(number){
+        //     case 1:System.out.println("samosa");
+        //     break;
+        //     case 2:System.out.println("burger");
+        //     break;
+        //     case 3:System.out.println("mango shake");
+        //     break;
+        //     default:System.out.println("invalid button");
+        // }
+
+        //basic calculator using switch
+        System.out.println("enter a number");
+        int a = sc.nextInt();
+        System.out.println("enter second number");
+        int b = sc.nextInt();
+        System.out.println("enter operator");
+        char operator = sc.next().charAt(0);
+
+        switch (operator) {
+            case '+':System.out.println(a+b);
             break;
-            case 2:System.out.println("burger");
+            case '-':System.out.println(a-b);
             break;
-            case 3:System.out.println("mango shake");
+            case '/':System.out.println(a/b);
             break;
-            default:System.out.println("invalid button");
-        }
+            case '%':System.out.println(a%b);
+            break;
+                
+            default:System.out.println("this calculator is just a basic one");       
+        }    
 
         sc.close();
     }
