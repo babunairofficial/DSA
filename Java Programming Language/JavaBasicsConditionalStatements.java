@@ -104,10 +104,23 @@ public class JavaBasicsConditionalStatements {
         // System.out.println(type);
 
         //check if a student will pass or fail
-        System.out.println("enter marks of the student");
-        int marks = sc.nextInt();
-        String reportCard = marks >=40?"pass":"fail";
-        System.out.println(reportCard);
+        // System.out.println("enter marks of the student");
+        // int marks = sc.nextInt();
+        // String reportCard = marks >=40?"pass":"fail";
+        // System.out.println(reportCard);
+
+        //switch statement
+        System.out.println("enter a button number");
+        int number = sc.nextInt();
+        switch(number){
+            case 1:System.out.println("samosa");
+            break;
+            case 2:System.out.println("burger");
+            break;
+            case 3:System.out.println("mango shake");
+            break;
+            default:System.out.println("invalid button");
+        }
 
         sc.close();
     }
