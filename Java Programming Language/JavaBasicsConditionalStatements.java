@@ -98,10 +98,16 @@ public class JavaBasicsConditionalStatements {
         // }
 
         //ternary operator
-        System.out.println("enter a number");
-        int number = sc.nextInt();
-        String type =((number%2) == 0) ? "even" : "odd";
-        System.out.println(type);
+        // System.out.println("enter a number");
+        // int number = sc.nextInt();
+        // String type =((number%2) == 0) ? "even" : "odd";
+        // System.out.println(type);
+
+        //check if a student will pass or fail
+        System.out.println("enter marks of the student");
+        int marks = sc.nextInt();
+        String reportCard = marks >=40?"pass":"fail";
+        System.out.println(reportCard);
 
         sc.close();
     }
