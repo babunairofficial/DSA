@@ -29,6 +29,7 @@ public class PracticeQuestion3 {
         */
 
         //question 3 - Write a java program to input week number (1-7) and print day of week name using switch case.
+        /* 
         Scanner sc = new Scanner(System.in);
         System.out.println("enter a week number (1- 7)");
         int weekNum = sc.nextInt();
@@ -55,8 +56,12 @@ public class PracticeQuestion3 {
               System.out.println("Sunday");
               break;
           }
+        */
+
+        //question 4
+        /*output would be x= false & y= 63 */
 
 
-        sc.close();
+        // sc.close();
     }
 }
