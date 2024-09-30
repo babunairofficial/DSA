@@ -61,7 +61,19 @@ public class PracticeQuestion3 {
         //question 4
         /*output would be x= false & y= 63 */
 
+        //question 5 - write a program that takes a year from the user and print whether that year is a leap year or not.
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a year");
+        int year = sc.nextInt();
+        if(
+          (year % 400 == 0)|| 
+          ((year % 4 == 0)&& (year % 100 != 0))
+          ){
+          System.out.println("Leap Year");
+        }else{
+          System.out.println("Not a leap year");
+        }
 
-        // sc.close();
+        sc.close();
     }
 }
