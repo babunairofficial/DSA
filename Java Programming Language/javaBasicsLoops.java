@@ -33,6 +33,7 @@ public class javaBasicsLoops {
         */
 
         //while loop - sum of first N natural numbers
+        /* 
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the value of N");
         int N = sc.nextInt();
@@ -44,6 +45,18 @@ public class javaBasicsLoops {
         }
         System.out.println("sum of "+N+" natural numbers is = "+sum);
         sc.close();
+        */
+
+        //for loop
+
+        //for loop - print square pattern
+        for(int i = 1; i<=4; i++){
+            for(int j = 1; j<=4; j++){
+                System.out.print('*');
+            }
+            System.out.println();
+            
+        }
 
 
     }
