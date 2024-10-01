@@ -21,6 +21,7 @@ public class javaBasicsLoops {
         */
 
         //while loop - print numbers from 1 to n
+        /* 
         Scanner sc = new Scanner(System.in);
         System.out.println("enter a last number");
         int lastNumber = sc.nextInt();
@@ -29,6 +30,19 @@ public class javaBasicsLoops {
             System.out.print(x + " ");
             x++;
         }
+        */
+
+        //while loop - sum of first N natural numbers
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the value of N");
+        int N = sc.nextInt();
+        int x = 1;
+        int sum = 0;
+        while(x <= N){
+            sum += x;
+            x++;
+        }
+        System.out.println("sum of "+N+" natural numbers is = "+sum);
         sc.close();
 
 
