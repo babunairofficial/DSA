@@ -50,6 +50,7 @@ public class javaBasicsLoops {
         //for loop
 
         //for loop - print square pattern
+        /* 
         for(int i = 1; i<=4; i++){
             for(int j = 1; j<=4; j++){
                 System.out.print('*');
@@ -57,7 +58,17 @@ public class javaBasicsLoops {
             System.out.println();
             
         }
+        */
 
-
+        //for loop - print reverse of a number
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a number");
+        int number = sc.nextInt();
+        int reverse = 0;
+        for(int i=number;i>0;i=i/10){
+            reverse = reverse*10 + i % 10;
+        }
+        System.out.println(reverse);
+        sc.close();
     }
 }
