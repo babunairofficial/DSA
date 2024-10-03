@@ -31,6 +31,7 @@ public class javaBasicsPatterns {
         */
 
         //Half Pyramid Pattern
+        /* 
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number");
         int star = sc.nextInt();
@@ -41,5 +42,21 @@ public class javaBasicsPatterns {
             System.out.println();
         }
         sc.close();
+        */
+
+        //character pattern
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int star = sc.nextInt();
+        char ch = 'A';
+        for(int i = 1; i<=star; i++){
+            for(int j=1; j<=i; j++){
+                System.out.print(ch+" ");
+                ch++;
+            }
+            System.out.println();
+        }
+        sc.close();
+
     }
 }
