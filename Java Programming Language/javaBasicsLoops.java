@@ -96,7 +96,7 @@ public class javaBasicsLoops {
         System.out.println("enter a number to check for prime");
         int n = sc.nextInt();
         int ctr = 0;
-        for(int i = 1; i<n/2;i++){
+        for(int i = 1; i<=n/2;i++){
             if(n%i == 0){
                 ctr++;
             }
