@@ -75,6 +75,7 @@ public class javaBasicsLoops {
 
         //break statement
         //question - keep entering numbers till user enters a multiple of 10.
+        /* 
         Scanner sc = new Scanner(System.in);
         do{
             
@@ -88,6 +89,25 @@ public class javaBasicsLoops {
         }
         while(true);
         sc.close();
+        */
 
+        //check if a number is prime or not
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a number to check for prime");
+        int n = sc.nextInt();
+        int ctr = 0;
+        for(int i = 1; i<n/2;i++){
+            if(n%i == 0){
+                ctr++;
+            }
+        }
+        if(ctr >1){
+            System.out.println("Not a prime number");
+        }
+        else
+        {
+            System.out.println("Prime number");
+        }
+        sc.close();
     }
 }
