@@ -42,6 +42,7 @@ public class PracticeQuestion4 {
         */
 
         //question 3 - write a program to find the factorial of any number entered by the user.
+        /* 
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number");
         int number = sc.nextInt();
@@ -50,6 +51,16 @@ public class PracticeQuestion4 {
             factorial *= i;
         }
         System.out.println("Factorial of "+number+" is "+factorial);
+        sc.close();
+        */
+
+        //question 4 - write a program to print the multiplication table of a number N, entered by the user
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number for multiplication table");
+        int a = sc.nextInt();
+        for(int i = 1; i<=10; i++){
+            System.out.println(a+" x "+i+" = "+a*i);
+        }
         sc.close();
     }
 }
