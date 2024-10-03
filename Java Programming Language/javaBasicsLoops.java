@@ -61,6 +61,7 @@ public class javaBasicsLoops {
         */
 
         //for loop - print reverse of a number
+        /* 
         Scanner sc = new Scanner(System.in);
         System.out.println("enter a number");
         int number = sc.nextInt();
@@ -70,5 +71,23 @@ public class javaBasicsLoops {
         }
         System.out.println(reverse);
         sc.close();
+        */
+
+        //break statement
+        //question - keep entering numbers till user enters a multiple of 10.
+        Scanner sc = new Scanner(System.in);
+        do{
+            
+            System.out.println("enter a number");
+            int num = sc.nextInt();
+            if(num == 10){
+                break;
+            }
+            
+                
+        }
+        while(true);
+        sc.close();
+
     }
 }
