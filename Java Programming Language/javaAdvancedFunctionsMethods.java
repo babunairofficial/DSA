@@ -56,7 +56,7 @@ public class javaAdvancedFunctionsMethods {
      */
 
     //function overloading 
-
+    /* 
     //function to calculate sum of 2 nums 
     public static int sum(int a, int b){
         return a+b;
@@ -73,5 +73,34 @@ public class javaAdvancedFunctionsMethods {
         System.out.println(sum(3,4));
         System.out.println(sum(1,2,3));
         System.out.println(sum(6.4f, 8.1f));
+    }
+    */
+
+    //Print all Primes in a Range
+    public static void primeCheck(int i){
+        int ctr = 0;
+        for(int j = 1; j<=i; j++){
+            if(i % j == 0){
+                ctr++;
+            }
+        }
+        if(ctr<=2){
+            System.out.println(i);
+        }
+    }
+    public static void primesInRange(int a, int b){
+        for(int i = a; i<b; i++){
+            primeCheck(i);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the first number in the range");
+        int a = sc.nextInt();
+        System.out.println("enter the last number in the range");
+        int b = sc.nextInt();
+        primesInRange(a,b);
+
+        sc.close();
     }
 }
