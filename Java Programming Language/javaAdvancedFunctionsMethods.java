@@ -77,6 +77,7 @@ public class javaAdvancedFunctionsMethods {
     */
 
     //Print all Primes in a Range
+    /* 
     public static void primeCheck(int i){
         int ctr = 0;
         for(int j = 1; j<=i; j++){
@@ -102,5 +103,26 @@ public class javaAdvancedFunctionsMethods {
         primesInRange(a,b);
 
         sc.close();
+    }
+    */
+
+    //Binary to Decimal
+    public static void binToDec(int bin){
+        int binNum = bin;
+        int power = 0;
+        int decimal = 0;
+
+        while(bin >0){
+            int lastDigit = bin % 10;
+            decimal = decimal + (lastDigit * (int)Math.pow(2, power));
+            power++;
+            bin /=10;
+
+        }
+        System.out.println("decimal of "+binNum+ " is "+decimal);
+
+    }
+    public static void main(String[] args) {
+        binToDec(101);
     }
 }
