@@ -26,7 +26,7 @@ public class javaAdvancedFunctionsMethods {
     }
     */
     //functions - find binomial coefficient
-
+    /*
     //find factorial
     public static int factorial(int a){
         int fact = 1;
@@ -52,5 +52,21 @@ public class javaAdvancedFunctionsMethods {
         int r = sc.nextInt();
         System.out.println("The binomial coefficient is "+bincoeff(n, r));
         sc.close();
+    }
+     */
+
+    //function overloading 
+
+    //function to calculate sum of 2 nums
+    public static int sum(int a, int b){
+        return a+b;
+    }
+    //function to calculate sum of 3 nums
+    public static int sum(int a, int b, int c){
+        return a+b+c;
+    }
+    public static void main(String[] args) {
+        System.out.println(sum(3,4));
+        System.out.println(sum(1,2,3));
     }
 }
