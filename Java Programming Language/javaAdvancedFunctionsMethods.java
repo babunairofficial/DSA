@@ -57,7 +57,7 @@ public class javaAdvancedFunctionsMethods {
 
     //function overloading 
 
-    //function to calculate sum of 2 nums
+    //function to calculate sum of 2 nums 
     public static int sum(int a, int b){
         return a+b;
     }
@@ -65,8 +65,13 @@ public class javaAdvancedFunctionsMethods {
     public static int sum(int a, int b, int c){
         return a+b+c;
     }
+    //function to calculate sum of 2 float values
+    public static float sum(float a, float b){
+        return a+b;
+    }
     public static void main(String[] args) {
         System.out.println(sum(3,4));
         System.out.println(sum(1,2,3));
+        System.out.println(sum(6.4f, 8.1f));
     }
 }
