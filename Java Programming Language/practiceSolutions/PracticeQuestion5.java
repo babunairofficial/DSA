@@ -40,7 +40,7 @@ public class PracticeQuestion5 {
     }
     */
 
-    //Question 3 - program to check if a number if palindrome or not.
+    /*//Question 3 - program to check if a number if palindrome or not.
     public static boolean ispalindrome(int x){
         int num = x;
         int rev = 0;
@@ -58,9 +58,28 @@ public class PracticeQuestion5 {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("enter 1st number");
+        System.out.println("enter a number");
         int x = sc.nextInt();
         System.out.println("Is "+x+" a palindrome? "+ispalindrome(x));
+
+        sc.close();
+    }
+    */
+
+    //Question 5 - compute sum of digits in an integer
+    public static int sumOfDigits(int integer){
+        int sum = 0;
+        while(integer>0){
+            sum = sum + integer%10;
+            integer /=10;
+        }
+        return sum;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a number");
+        int integer = sc.nextInt();
+        System.out.println("Sum of digits is "+sumOfDigits(integer));
 
         sc.close();
     }
