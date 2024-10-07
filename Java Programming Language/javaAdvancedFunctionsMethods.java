@@ -107,6 +107,7 @@ public class javaAdvancedFunctionsMethods {
     */
 
     //Binary to Decimal
+    /* 
     public static void binToDec(int bin){
         int binNum = bin;
         int power = 0;
@@ -124,5 +125,26 @@ public class javaAdvancedFunctionsMethods {
     }
     public static void main(String[] args) {
         binToDec(101);
+    }
+    */
+
+    //Decimal to Binary
+
+    public static void decToBin(int dec){
+        int decNum = dec;
+        int power = 0;
+        int bin = 0;
+
+        while(dec > 0){
+            int rem = dec % 2;
+            bin = bin + (rem * (int)Math.pow(10, power));
+            power++;
+            dec /=2;
+
+        }
+        System.out.println("decimal of "+decNum+ " is "+bin);
+    }
+    public static void main(String[] args) {
+        decToBin(15);
     }
 }
