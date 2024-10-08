@@ -48,11 +48,33 @@ public class javaAdvancedPatterns2 {
             System.out.println("");
         }
     }
+
+    //0-1 triangle
+    /*
+                1
+                01
+                101
+                0101
+                10101
+     */
+    public static void zero_one_triangle(int a){
+        for(int i = 1; i <= a; i++){
+            for(int j = 1; j <= i; j++){
+                if((i+j) % 2 == 0){
+                    System.out.print(1);
+                }else{
+                    System.out.print(0);
+                }
+            }
+            System.out.println("");
+        }
+    }
     public static void main(String[] args) {
         hollow_Rectangle(5,10);
         inverted_rotated_half_pyramid(5);
         inverted_half_pyramid_with_numbers(5);
         floyds_triangle(5);
+        zero_one_triangle(5);
     }
     
 }
