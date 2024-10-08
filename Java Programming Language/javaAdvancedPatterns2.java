@@ -36,10 +36,23 @@ public class javaAdvancedPatterns2 {
             System.out.println("");
         }
     }
+
+    //Floyd's triangle
+    public static void floyds_triangle(int row){
+        int c = 1;
+        for(int i = 1; i <= row; i++){
+            for(int j = 1; j <= i; j++){
+                System.out.print(c+" ");
+                c++;
+            }
+            System.out.println("");
+        }
+    }
     public static void main(String[] args) {
         hollow_Rectangle(5,10);
         inverted_rotated_half_pyramid(5);
         inverted_half_pyramid_with_numbers(5);
+        floyds_triangle(5);
     }
     
 }
