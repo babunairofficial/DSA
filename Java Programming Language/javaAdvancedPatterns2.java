@@ -100,6 +100,19 @@ public class javaAdvancedPatterns2 {
             System.out.println("");
         }
     }
+
+    //Solid Rhombus pattern
+    public static void solid_rhombus(int s){
+        for(int i = 1; i <= s; i++){
+            for(int j = 1; j <= s-i; j++){
+                System.out.print(" ");
+            }
+            for(int j = 1; j <= s; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         hollow_Rectangle(5,10);
         inverted_rotated_half_pyramid(5);
@@ -107,6 +120,7 @@ public class javaAdvancedPatterns2 {
         floyds_triangle(5);
         zero_one_triangle(5);
         butterfly_pattern(4);
+        solid_rhombus(5);
     }
     
 
