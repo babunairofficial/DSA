@@ -113,6 +113,23 @@ public class javaAdvancedPatterns2 {
             System.out.println();
         }
     }
+
+    //Hollow Rhombus pattern
+    public static void hollow_rhombus(int s){
+        for(int i = 1; i <= s; i++){
+            for(int j = 1; j <= s-i; j++){
+                System.out.print(" ");
+            }
+            for(int j = 1; j<=s; j++){
+                if(i == 1 || i == s || j == 1 || j == s){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         hollow_Rectangle(5,10);
         inverted_rotated_half_pyramid(5);
@@ -121,6 +138,7 @@ public class javaAdvancedPatterns2 {
         zero_one_triangle(5);
         butterfly_pattern(4);
         solid_rhombus(5);
+        hollow_rhombus(5);
     }
     
 
