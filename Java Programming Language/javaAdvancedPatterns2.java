@@ -130,6 +130,31 @@ public class javaAdvancedPatterns2 {
             System.out.println();
         }
     }
+    
+    //Diamond pattern
+    public static void diamond(int line){
+        //top half
+        for(int i = 1; i <= line; i++){
+            for(int j = 1; j <= line-i; j++){
+                System.out.print(" ");
+            }
+            for(int j = 1; j <= 2*i-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        //bottom half
+        for(int i = line; i >= 1; i--){
+            for(int j = 1; j <= line-i; j++){
+                System.out.print(" ");
+            }
+            for(int j = 1; j <= 2*i-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         hollow_Rectangle(5,10);
         inverted_rotated_half_pyramid(5);
@@ -139,6 +164,7 @@ public class javaAdvancedPatterns2 {
         butterfly_pattern(4);
         solid_rhombus(5);
         hollow_rhombus(5);
+        diamond(4);
     }
     
 
