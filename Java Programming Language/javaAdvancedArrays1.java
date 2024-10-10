@@ -93,6 +93,7 @@ public class javaAdvancedArrays1 {
     }
     */
 
+    /* 
     //Reverse an array
     public static void reverseArray(int array[]){
         int first = 0; 
@@ -113,5 +114,20 @@ public class javaAdvancedArrays1 {
             System.out.print(array[i]+" ");
         }
         
+    }
+    */
+
+    //Forming Pairs in array
+    public static void pairs(int numbers[]){
+        for(int i = 0; i < numbers.length; i++){
+            for(int j = i+1; j < numbers.length; j++){
+                System.out.print("("+numbers[i]+","+numbers[j]+")"+" ");
+            }
+            System.out.println();
+        }
+    }
+    public static void main(String[] args) {
+        int numbers[] = {0, 2, 4, 6, 8, 10};
+        pairs(numbers);
     }
 }
