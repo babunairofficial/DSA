@@ -60,6 +60,7 @@ public class javaAdvancedArrays1 {
     }
     */
 
+    /* 
     //binary search (when arrays are sorted)
     public static int binarySearch(int numbers[], int key){
         int start = 0;
@@ -89,5 +90,28 @@ public class javaAdvancedArrays1 {
             System.out.println("key is at position = "+search);
         }
 
+    }
+    */
+
+    //Reverse an array
+    public static void reverseArray(int array[]){
+        int first = 0; 
+        int last = array.length - 1;
+        
+        while(first<last){
+            int temp = array[first];
+            array[first] = array[last];
+            array[last] = temp;
+            first ++;
+            last --;
+        }
+    }
+    public static void main(String[] args) {
+        int array[] = {12, 15, 18, 9, 3, 45};
+        reverseArray(array);
+        for(int i = 0; i < array.length; i++){
+            System.out.print(array[i]+" ");
+        }
+        
     }
 }
