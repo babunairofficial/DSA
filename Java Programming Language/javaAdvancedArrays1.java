@@ -18,8 +18,10 @@ public class javaAdvancedArrays1 {
         }        
     }
     */
-
+    
+    /* 
     //linear search
+    
     public static int linear_search(int numbers[], int key){
         for(int i = 0; i < numbers.length; i++){
             if(numbers[i] == key){
@@ -37,5 +39,22 @@ public class javaAdvancedArrays1 {
         }else{
             System.out.println("key is at index "+index);
         }
+    }
+    */
+
+    //largest number
+    public static int largestNumber(int numbers[]){
+        int largest = Integer.MIN_VALUE;
+        for(int i = 0; i < numbers.length; i++){
+            if(numbers[i]> largest){
+                largest = numbers[i];
+            }
+        }
+        return largest;
+    }
+    public static void main(String[] args) {
+        int numbers[] = {7,65,21,71,23,52,16,0,45};
+        int largest = largestNumber(numbers);
+        System.out.println("largest number is "+largest);
     }
 }
