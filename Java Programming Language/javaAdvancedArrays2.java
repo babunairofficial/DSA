@@ -107,6 +107,7 @@ public class javaAdvancedArrays2 {
     }
     */
 
+    /* 
     //Trapping water - second method (without creating new arrays) Space Time complexity O(1)    
     public static int trappingRainwater(int height[]) {
         int n = height.length;
@@ -140,5 +141,26 @@ public class javaAdvancedArrays2 {
     public static void main(String[] args) {
         int height[] = {4, 2, 0, 6, 3, 2, 5};
         System.out.println(trappingRainwater(height));
+    }
+    */
+
+    //maximum stockprofit
+    public static int stocksProfit(int prices[]){
+        int buy = Integer.MAX_VALUE;
+        int maxProfit = 0;
+
+        for(int i = 0; i < prices.length; i++){
+            if(buy < prices[i]){
+                int profit = prices[i] - buy;
+                maxProfit = Math.max(maxProfit, profit);
+            }else{
+                buy = prices[i];
+            }
+        }
+        return maxProfit;
+    }
+    public static void main(String[] args) {
+        int prices[] = {5,2,1,4,9,3};
+        System.out.println(stocksProfit(prices));
     }
 }
