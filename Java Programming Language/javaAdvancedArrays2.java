@@ -77,7 +77,8 @@ public class javaAdvancedArrays2 {
     }
     */
 
-    //Trapping Rainwater
+    /* 
+    //Trapping Rainwater - Space time complexity O(n)
     public static int trappingRainwater(int height[]){
         int n = height.length;
 
@@ -100,6 +101,42 @@ public class javaAdvancedArrays2 {
         }
         return trappedWater;
     }
+    public static void main(String[] args) {
+        int height[] = {4, 2, 0, 6, 3, 2, 5};
+        System.out.println(trappingRainwater(height));
+    }
+    */
+
+    //Trapping water - second method (without creating new arrays) Space Time complexity O(1)    
+    public static int trappingRainwater(int height[]) {
+        int n = height.length;
+        int left_max = 0;
+        int right_max = 0;
+        int left = 0;
+        int right = n - 1;
+        int trappedWater = 0;
+    
+        while (left < right) {
+            if (height[left] < height[right]) {
+                if (height[left] >= left_max) {
+                    left_max = height[left];
+                } else {
+                    trappedWater += left_max - height[left];
+                }
+                left++;
+            } else {
+                if (height[right] >= right_max) {
+                    right_max = height[right];
+                } else {
+                    trappedWater += right_max - height[right];
+                }
+                right--;
+            }
+        }
+    
+        return trappedWater;
+    }
+    
     public static void main(String[] args) {
         int height[] = {4, 2, 0, 6, 3, 2, 5};
         System.out.println(trappingRainwater(height));
