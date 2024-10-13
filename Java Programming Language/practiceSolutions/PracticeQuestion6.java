@@ -24,6 +24,7 @@ public class PracticeQuestion6 {
     }
     */
     
+    /* 
     //Question 2 - 
     
         public static int search(int[] nums, int target) {
@@ -73,6 +74,26 @@ public class PracticeQuestion6 {
             int target = 0; // Value to search for
             int result = search(nums, target);
             System.out.println("Index of " + target + ": " + result);
+        }
+        */
+
+        //Question 3 - profit in stocks
+
+        public static int maxProfit(int prices[]){
+            int buy = prices[0];
+            int profit = 0;
+            for(int i = 1; i < prices.length; i++){
+                if(buy < prices[i]){
+                    profit = prices[i] - buy;
+                }else{
+                    buy = prices[i];
+                }
+            }
+            return profit;
+        }
+        public static void main(String[] args) {
+            int prices[] = {8,5,1,3,2,9,7,11};
+            System.out.println("maximum profit = "+maxProfit(prices));
         }
     }
 
