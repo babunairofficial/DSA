@@ -97,6 +97,7 @@ public class PracticeQuestion6 {
     }
     */
 
+    /* 
     //Question 4 - calculate trap water\
     public static int trap(int[] height) {
         // If the array is empty or has only one element, no water can be trapped
@@ -141,6 +142,51 @@ public class PracticeQuestion6 {
         int[] elevationMap = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
         int trappedWater = trap(elevationMap);
         System.out.println("Amount of water trapped: " + trappedWater);
-    }        
+    }
+    */
+
+    //Question 5 - find triplets with sum zero
+    // Static method to find triplets that sum to zero
+    public static void findTriplets(int[] nums) {
+        // Sort the array
+        java.util.Arrays.sort(nums);
+        
+        // Check all possible triplets
+        for (int i = 0; i < nums.length - 2; i++) {
+            // Skip duplicates for first element
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
+            
+            int left = i + 1;
+            int right = nums.length - 1;
+            
+            while (left < right) {
+                int sum = nums[i] + nums[left] + nums[right];
+                
+                if (sum == 0) {
+                    // Found a triplet, print it
+                    System.out.println(nums[i] + " " + nums[left] + " " + nums[right]);
+                    
+                    // Skip duplicates
+                    while (left < right && nums[left] == nums[left + 1]) left++;
+                    while (left < right && nums[right] == nums[right - 1]) right--;
+                    
+                    left++;
+                    right--;
+                } else if (sum < 0) {
+                    left++;
+                } else {
+                    right--;
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {-1, 0, 1, 2, -1, -4};
+        System.out.println("Triplets with sum zero:");
+        findTriplets(nums);
+    }
 }
+
+
 
