@@ -24,9 +24,26 @@ public class javaAdvancedSorting {
         System.out.println();
     }
 
+    //selection sort
+    public static void selectionSort(int arr[]){
+        for(int i = 0; i < arr.length-1; i++){
+            int minimumPos = i ;
+            for(int j = i+1; j < arr.length; j++){
+                if(arr[minimumPos] > arr[j]){
+                    minimumPos = j;
+                }
+            }
+            //swap
+            int temp = arr[minimumPos];
+            arr[minimumPos] = arr[i];
+            arr[i] = temp;
+        }
+    }
+
     public static void main(String[] args) {
         int arr[] = {9,7,2,8,3,6};
-        bubbleSort(arr);
+        // bubbleSort(arr);
+        selectionSort(arr);
         printArr(arr);
     }
 }
