@@ -1,3 +1,4 @@
+import java.util.*;
 public class javaAdvancedSorting {
     /**
      * Sorts an array using the bubble sort algorithm.
@@ -58,7 +59,8 @@ public class javaAdvancedSorting {
         int arr[] = {9,7,2,8,3,6};
         // bubbleSort(arr);
         // selectionSort(arr);
-        insertionSort(arr);
+        // insertionSort(arr);
+        Arrays.sort(arr);
         printArr(arr);
     }
 }
