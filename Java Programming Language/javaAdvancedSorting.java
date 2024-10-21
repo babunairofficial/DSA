@@ -44,7 +44,7 @@ public class javaAdvancedSorting {
     //insertion sort
     public static void insertionSort(int arr[]){
         for(int i = 1; i < arr.length; i++){
-            int curr = i;
+            int curr = arr[i];
             int prev = i-1;
             //finding the position to insert
             while(prev >= 0 && arr[prev] > curr){ 
@@ -59,8 +59,8 @@ public class javaAdvancedSorting {
         int arr[] = {9,7,2,8,3,6};
         // bubbleSort(arr);
         // selectionSort(arr);
-        // insertionSort(arr);
-        Arrays.sort(arr);
+        insertionSort(arr);
+        // Arrays.sort(arr);
         printArr(arr);
     }
 }
