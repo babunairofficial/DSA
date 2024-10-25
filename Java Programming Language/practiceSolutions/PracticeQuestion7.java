@@ -25,12 +25,37 @@ public class PracticeQuestion7 {
         printArray(arr);
     }
 
+    //Selection Sort
+    public static void selectionSort(int arr[]){
+        for(int i = 0; i < arr.length-1; i++){
+            int max_id = i;
+            for(int j = i+1; j < arr.length; j++){
+                if(arr[j] > arr[max_id]){
+                    max_id = j;
+                }
+            }
+            int temp = arr[i];
+            arr[i] = arr[max_id];
+            arr[max_id] = temp;
+        }
+        printArray(arr);
+    }
+
     public static void main(String[] args) {
         int arr[] = {3, 6, 2, 1, 8, 7, 4, 5, 3, 1};
-                
+        
+        //print original array
+        System.out.print("print array before sorting: ");
+        printArray(arr);
+        
+        //space
+        System.out.println();
+        
+        //print sorted array
+        System.out.print("print sorted array: ");
         //sorting method call
-        bubbleSort(arr);
-
+        // bubbleSort(arr);
+        selectionSort(arr);
         
     }
 }
