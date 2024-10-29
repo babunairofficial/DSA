@@ -32,6 +32,7 @@ public class javaAdvanced2DArrays {
     }
     */
 
+    /* 
     //Spiral Matrix
    
     public static void printSpiralMatrix(int[][] matrix) {
@@ -88,6 +89,36 @@ public class javaAdvanced2DArrays {
         // Output: Spiral Matrix:
         //         1 2 3 4 5 10 15 20 25 24 23 22 21 16 11 6 7 8 9 14 19 18 17 12 13
     }
+    */
     
+    //Diagonal Sum
+
+    public static int diagonalSum(int matrix[][]){
+        int sum = 0;
+
+        for(int i=0; i<matrix.length; i++){
+            for(int j=0; j<matrix[0].length; j++){
+                if(i == j){
+                    sum += matrix[i][j];
+                }else if(i+j == matrix.length-1){
+                    sum += matrix[i][j];
+                }
+            }
+        }
+        return sum;
+    }
     
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {1, 2, 3, 4, 5},
+            {6, 7, 8, 9, 10},
+            {11, 12, 13, 14, 15},
+            {16, 17, 18, 19, 20},
+            {21, 22, 23, 24, 25}
+        };
+
+        //print diagonal sum
+        System.out.println(diagonalSum(matrix));
+
+    }
 }
