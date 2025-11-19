@@ -91,6 +91,7 @@ public class javaAdvanced2DArrays {
     }
     */
     
+    /* 
     //Diagonal Sum
 
     public static int diagonalSum(int matrix[][]){
@@ -119,6 +120,28 @@ public class javaAdvanced2DArrays {
         }
         return sum;
     }
+         */
+
+
+    //Search in Sorted Matrix => staircase search
+    public static boolean staircaseSearch(int matrix[][], int key) {
+        int row = 0, col = matrix[0].length-1;
+
+        while(row < matrix.length && col >= 0) {
+            if(matrix[row][col] == key) {
+                System.out.println("found key at (" + row + "," + col + ")");
+                return true;
+            }
+            else if(key < matrix[row][col]) {
+                col--;
+            }
+            else {
+                row++;
+            }
+        }
+        System.out.println("key not found!");
+        return false;
+    }
     
     public static void main(String[] args) {
         int[][] matrix = {
@@ -129,8 +152,15 @@ public class javaAdvanced2DArrays {
             {21, 22, 23, 24, 25}
         };
 
+        
         //print diagonal sum
-        System.out.println(diagonalSum(matrix));
+        // System.out.println(diagonalSum(matrix));
+
+        int key = 23;
+        staircaseSearch(matrix, key);
+
 
     }
+   
+
 }
