@@ -31,5 +31,32 @@ public class javaAdvancedStrings {
         System.out.println(fullName.charAt(1));
 
         printLetters(fullName);
-    }    
+
+
+        //compare strings
+        
+        String s1 = "rahul";
+        String s2 = "rahul";
+        String s3 = new String("rahul");
+
+        // if(s1 == s2) {
+        //     System.out.println("Strings are equal");
+        // } else {
+        //     System.out.println("Strings are not equal");
+        // }
+
+        // if(s1 == s3) {
+        //     System.out.println("Strings are equal");
+        // } else {
+        //     System.out.println("Strings are not equal");
+        // }
+
+        if(s1.equals(s3)) {
+            System.out.println("Strings are equal");
+        } else {
+            System.out.println("Strings are not equal");
+        } /* == compares references
+        .equals() compares contents
+        */
+    }
 }
