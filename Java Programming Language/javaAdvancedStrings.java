@@ -6,6 +6,13 @@ public class javaAdvancedStrings {
         }
         System.out.println();
     }
+    public static String subString(String strng, int si, int ei) {
+        String substr = "";
+        for(int i = si; i < ei; i++) {
+            substr += strng.charAt(i);
+        }
+        return substr;
+    }
     public static void main(String args[]) {
         char arr[] ={'a', 'b', 'c', 'd'};
         String str = "abcd";
@@ -58,5 +65,13 @@ public class javaAdvancedStrings {
         } /* == compares references
         .equals() compares contents
         */
+
+
+        //substring
+        String strng = "HelloWorld";
+        System.out.println(subString(strng, 0, 5));
+
+        //shortcut method for substring
+        System.out.println(strng.substring(0, 5));
     }
 }
