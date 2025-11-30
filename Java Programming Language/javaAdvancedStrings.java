@@ -73,5 +73,15 @@ public class javaAdvancedStrings {
 
         //shortcut method for substring
         System.out.println(strng.substring(0, 5));
+
+
+        //string builder
+        StringBuilder sb = new StringBuilder("");
+        for(char ch = 'a'; ch <= 'z'; ch++) {
+            sb.append(ch);
+            System.out.println(sb);
+        }
+
+        System.out.println(sb.length());
     }
 }
