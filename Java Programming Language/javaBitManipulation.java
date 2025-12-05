@@ -10,6 +10,15 @@ public class javaBitManipulation {
             System.out.println("odd number");
         }
     }
+
+    public static int getIthBit(int n, int i) {
+        int bitMask = 1<<i;
+        if ((n & bitMask) == 0) {
+            return 0;
+        } else {
+            return 1;
+        }
+    }
     public static void main(String[] args) {
 
         //Binary Left Shift
@@ -22,5 +31,8 @@ public class javaBitManipulation {
         oddOrEven(5);
         oddOrEven(17);
         oddOrEven(24);
+
+        //get ith Bit
+        System.out.println(getIthBit(10, 2));
     }
 }
