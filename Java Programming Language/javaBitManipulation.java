@@ -24,6 +24,11 @@ public class javaBitManipulation {
         int bitMask = 1<<i;
         return n | bitMask;
     }
+
+    public static int clearIthBit(int n, int i) {
+        int bitMask = ~(1<<i);
+        return n & bitMask;
+    }
     public static void main(String[] args) {
 
         //Binary Left Shift
@@ -42,5 +47,8 @@ public class javaBitManipulation {
 
         //set ith bit
         System.out.println(setIthBit(10, 2));
+
+        //clear ith bit
+        System.out.println(clearIthBit(10, 1));
     }
 }
