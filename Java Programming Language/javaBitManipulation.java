@@ -53,6 +53,10 @@ public class javaBitManipulation {
         int bitMask = a | b;
         return n & bitMask;
     }
+
+    public static boolean isPowerOfTwo(int n) {
+        return (n&(n-1)) == 0;
+    }
     public static void main(String[] args) {
 
         //Binary Left Shift
@@ -81,7 +85,10 @@ public class javaBitManipulation {
         //clear last i bits
         System.out.println(clearIBits(15, 2));
 
-        //celar range of bits
+        //clear range of bits
         System.out.println(clearRangeIBits(10, 2, 4));
+
+        //check if a number is a power of 2
+        System.out.println(isPowerOfTwo(32));
     }
 }
