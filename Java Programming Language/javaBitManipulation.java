@@ -57,6 +57,17 @@ public class javaBitManipulation {
     public static boolean isPowerOfTwo(int n) {
         return (n&(n-1)) == 0;
     }
+
+    public static int countSetBits(int n) {
+        int count = 0;
+        while(n > 0) {
+            if((n & 1) != 0) {
+                count++;
+            }
+            n = n>>1;
+        }
+        return count;
+    }
     public static void main(String[] args) {
 
         //Binary Left Shift
@@ -90,5 +101,8 @@ public class javaBitManipulation {
 
         //check if a number is a power of 2
         System.out.println(isPowerOfTwo(32));
+
+        //count set bits in a number
+        System.out.println(countSetBits(15));
     }
 }
