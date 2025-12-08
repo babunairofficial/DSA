@@ -68,6 +68,18 @@ public class javaBitManipulation {
         }
         return count;
     }
+
+    public static int fastExpo(int a, int n) {
+        int ans = 1;
+        while(n > 0) {
+            if((n & 1) != 0) { //check LSB
+                ans = ans * a;
+            }
+            a = a * a;
+            n = n>>1;
+        }
+        return ans;
+    }
     public static void main(String[] args) {
 
         //Binary Left Shift
@@ -104,5 +116,8 @@ public class javaBitManipulation {
 
         //count set bits in a number
         System.out.println(countSetBits(15));
+
+        //fast exponentiation 
+        System.out.println(fastExpo(3, 5));
     }
 }
