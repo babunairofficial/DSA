@@ -14,6 +14,9 @@ public class OOPS {
         BankAccount myAcc = new BankAccount();
         myAcc.userName = "govind";
         myAcc.setPassword("abcdefg");
+
+        Student s1 = new Student();
+        System.out.println(s1);
     }
 }
 
@@ -53,5 +56,9 @@ class Student {
 
     void calcPercentage(int phy, int chem, int math) {
         percentage = (phy + chem + math) / 3;
+    }
+
+    Student() {
+        System.out.println("Constructor is called");
     }
 }
