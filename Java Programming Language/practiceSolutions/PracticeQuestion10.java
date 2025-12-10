@@ -14,6 +14,7 @@ public class PracticeQuestion10 {
         System.out.println("After swap: x = " + x + " and y = " + y);
         */
 
+        /* 
         //Q3
         int x = 6;
         System.out.println(x + " + " + 1 + " is " + -~x);
@@ -21,5 +22,12 @@ public class PracticeQuestion10 {
         System.out.println(x + " + " + 1 + " is " + -~x);
         x = 0;
         System.out.println(x + " + " + 1 + " is " + -~x);
+        */
+
+        //Q4
+        for(char ch = 'A'; ch <= 'Z'; ch++) {
+            System.out.println((char)(ch | ' '));
+        }
+
     }
 }
