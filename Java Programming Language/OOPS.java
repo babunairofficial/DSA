@@ -8,6 +8,17 @@ public class OOPS {
         p1.setColor("yellow");
         System.out.println(p1.color);
 
+        BankAccount myAcc = new BankAccount();
+        myAcc.userName = "govind";
+        myAcc.setPassword("abcdefg");
+    }
+}
+
+class BankAccount {
+    public String userName;
+    private String password;
+    public void setPassword(String pswd) {
+        password = pswd;
     }
 }
 
