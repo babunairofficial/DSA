@@ -17,6 +17,24 @@ public class OOPS {
 
         Student s1 = new Student();
         System.out.println(s1);
+
+
+        System.out.println("First Athlete Object");
+        Athletes ath1 = new Athletes("Ram", "100m", 1);
+        System.out.println(
+            "Name of Athlete: " + ath1.name +
+            " Event Participated: " + ath1.event +
+            " Position achieved: "+ ath1.result
+        );
+        //invoke the copy constructor
+        Athletes ath2 = new Athletes(ath1);
+        ath2.event = "100m";
+        System.out.println("Copy Constructor used for Second Object");
+        System.out.println(
+            "Name of Athlete: " + ath2.name + 
+            " Event Participated: " + ath1.event +
+            " Position achieved: "+ ath2.result
+        );
     }
 }
 
@@ -60,5 +78,23 @@ class Student {
 
     Student() {
         System.out.println("Constructor is called");
+    }
+}
+
+class Athletes {
+    String name;
+    String event;
+    int result;
+
+    Athletes(String name, String event, int result) {
+        this.name = name;
+        this.event = event;
+        this.result = result;
+    }
+
+    //Copy Constructor
+    Athletes(Athletes ath2) {
+        this.name = ath2.name;
+        this.result = ath2.result;
     }
 }
