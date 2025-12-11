@@ -28,11 +28,11 @@ public class OOPS {
         );
         //invoke the copy constructor
         Athletes ath2 = new Athletes(ath1);
-        ath2.event = "100m";
+        ath2.event = "200m";
         System.out.println("Copy Constructor used for Second Object");
         System.out.println(
             "Name of Athlete: " + ath2.name + 
-            " Event Participated: " + ath1.event +
+            " Event Participated: " + ath2.event +
             " Position achieved: "+ ath2.result
         );
     }
@@ -92,9 +92,18 @@ class Athletes {
         this.result = result;
     }
 
+
     //Copy Constructor
-    Athletes(Athletes ath2) {
-        this.name = ath2.name;
-        this.result = ath2.result;
+    //shallow copy constructor
+    // Athletes(Athletes ath1) {
+    //     this.name = ath1.name;
+    //     this.result = ath1.result;
+    // }
+
+    //deep copy
+     Athletes(Athletes ath1) {
+        this.name = new String(ath1.name);
+        this.event = new String(ath1.event);
+        this.result = ath1.result;
     }
 }
