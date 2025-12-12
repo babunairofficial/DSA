@@ -43,6 +43,8 @@ public class OOPS {
         dobby.eat();
         dobby.legs = 4;
         System.out.println(dobby.legs);
+
+        
     }
 }
 
@@ -140,8 +142,17 @@ class Fish extends Animal {
 //multi level inheritance
 class Mammal extends Animal {
     int legs;
+    void walk() {
+        System.out.println("walks");
+    }
 }
 
 class Dog extends Mammal {
     String breed;
+}
+ 
+class Bird extends Animal {
+    void fly() {
+        System.out.println("fly");
+    }
 }
