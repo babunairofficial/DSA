@@ -49,6 +49,10 @@ public class OOPS {
         System.out.println(calc.sum(1, 2));
         System.out.println(calc.sum(1.5f, 2.5f));
         System.out.println(calc.sum(1, 2, 3));
+
+        //function overriding
+        College s = new College();
+        s.teach();
     }
 }
 
@@ -173,5 +177,18 @@ class Calculator {
 
     int sum(int a, int b, int c) {
         return a + b + c;
+    }
+}
+
+//function overriding
+class University {
+    void teach() {
+        System.out.println("Teaches everything");
+    }
+}
+
+class College extends University {
+    void teach() {
+        System.out.println("teaches something");
     }
 }
