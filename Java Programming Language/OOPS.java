@@ -44,7 +44,11 @@ public class OOPS {
         dobby.legs = 4;
         System.out.println(dobby.legs);
 
-        
+        //function overloading
+        Calculator calc = new Calculator();
+        System.out.println(calc.sum(1, 2));
+        System.out.println(calc.sum(1.5f, 2.5f));
+        System.out.println(calc.sum(1, 2, 3));
     }
 }
 
@@ -154,5 +158,20 @@ class Dog extends Mammal {
 class Bird extends Animal {
     void fly() {
         System.out.println("fly");
+    }
+}
+
+//function overloading
+class Calculator {
+    int sum(int a, int b) {
+        return a + b;
+    }
+    
+    float sum (float a, float b) {
+        return a + b;
+    }
+
+    int sum(int a, int b, int c) {
+        return a + b + c;
     }
 }
