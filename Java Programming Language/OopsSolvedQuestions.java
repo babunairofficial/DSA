@@ -31,8 +31,16 @@ public class OopsSolvedQuestions {
         obj1.print1(); //Error line
         */
 
+        /* 
         Vehicle obj2 = new Vehicle();
         obj2.print();
+        */
+
+        //Solved Practice Question 8
+        System.out.println(Book.count); //static variables can be accessed directly from class.
+        Book b1 = new Book(150);
+        Book b2 = new Book(250);
+        System.out.println(Book.count);
     }    
 }
 /* 
@@ -66,6 +74,7 @@ class Car extends Vehicle{
 }
 */
 
+/* 
 class Vehicle{
     void print(){
         System.out.println("Base class(Vehicle)");
@@ -74,5 +83,16 @@ class Vehicle{
 class Car extends Vehicle{
     void print1(){
         System.out.println("Derived class(Car)");
+    }
+}
+*/
+
+class Book{
+    int price;
+    static int count;
+
+    public Book(int price) {
+        this.price = price;
+        count++;
     }
 }
