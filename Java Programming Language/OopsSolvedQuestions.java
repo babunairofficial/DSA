@@ -44,9 +44,15 @@ public class OopsSolvedQuestions {
         System.out.println(Book.count);
         */
 
+        /* 
         Test t = new Test();
         t.set_marks(98);
         System.out.println(Test.marks);
+        */
+
+        Test t = new Test();
+        t.changeB();
+        System.out.println(Test.a + Test.b);
     }    
 }
 /* 
@@ -105,9 +111,19 @@ class Book{
 }
 */
 
+/* 
 class Test{
     static int marks;
     void set_marks(int marks) {
         this.marks = marks;
+    }
+}
+*/
+
+class Test {
+    static int a = 10;
+    static int b;
+    static void changeB() {
+        b = a * 3;
     }
 }
