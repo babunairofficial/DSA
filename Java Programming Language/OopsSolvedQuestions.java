@@ -8,11 +8,19 @@ public class OopsSolvedQuestions {
         */
 
         //Solved Practice Question 2
+        /* 
         Person p = new Person();
         p.name = "peter";
         p.weight = 50;
         System.out.println(p.name);
         System.out.println(p.weight);
+        */
+
+        Vehicle obj1 = new Car();
+        obj1.print();
+
+        Vehicle obj2 = new Vehicle();
+        obj2.print();
     }    
 }
 /* 
@@ -29,4 +37,17 @@ class Person {
 class Student extends Person{
     int rollNumber;
     String schoolName;
+}
+
+//Note : in java, private and protected modifiers are not allowed in front of class. 
+
+class Vehicle{
+    void print(){
+        System.out.println("Base class(Vehicle)");
+    }
+}
+class Car extends Vehicle{
+    void print(){
+        System.out.println("Derived class(Car)");
+    }
 }
