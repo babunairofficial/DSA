@@ -37,10 +37,16 @@ public class OopsSolvedQuestions {
         */
 
         //Solved Practice Question 8
+        /* 
         System.out.println(Book.count); //static variables can be accessed directly from class.
         Book b1 = new Book(150);
         Book b2 = new Book(250);
         System.out.println(Book.count);
+        */
+
+        Test t = new Test();
+        t.set_marks(98);
+        System.out.println(Test.marks);
     }    
 }
 /* 
@@ -87,6 +93,7 @@ class Car extends Vehicle{
 }
 */
 
+/* 
 class Book{
     int price;
     static int count;
@@ -94,5 +101,13 @@ class Book{
     public Book(int price) {
         this.price = price;
         count++;
+    }
+}
+*/
+
+class Test{
+    static int marks;
+    void set_marks(int marks) {
+        this.marks = marks;
     }
 }
