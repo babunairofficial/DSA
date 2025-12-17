@@ -35,11 +35,23 @@ public class RecursionBasics {
         int s = n + sum(n-1);
         return s;
     }
+
+    public static int fib(int n) {
+        if(n == 0 || n == 1) {
+            return n;
+        }
+
+        int fib1 = fib(n-1);
+        int fib2 = fib(n-2);
+        int fn = fib1 + fib2;
+        return fn;
+    }
     public static void main(String[] args) {
-        int n = 5;
+        int n = 25;
         // printDec(n);
         // printInc(n);
         // System.out.println(fact(n));
-        System.out.println(sum(n));
+        // System.out.println(sum(n));
+        System.out.println(fib(n));
     }
 }
