@@ -59,14 +59,29 @@ public class RecursionBasics {
 
         return isSorted(arr, i+1);
     }
+
+    //first occurence of an element in an array
+    public static int firstOccurence(int arr[], int key, int i) {
+        if(i == arr.length) {
+            return -1;
+        }
+        if(arr[i] == key) {
+            return i;
+        }
+
+        return firstOccurence(arr, key, i+1);
+    }
     public static void main(String[] args) {
         // int n = 25;
-        int arr[] = {5, 6, 9};
+        // int arr[] = {5, 6, 9};
         // printDec(n);
         // printInc(n);
         // System.out.println(fact(n));
         // System.out.println(sum(n));
         // System.out.println(fib(n));
-        System.out.println(isSorted(arr, 0));
+        // System.out.println(isSorted(arr, 0));
+
+        int arr[] = {8, 3, 6, 9, 5, 10, 2, 5, 3};
+        System.out.println(firstOccurence(arr, 5, 0));
     }
 }
