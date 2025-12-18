@@ -93,6 +93,21 @@ public class RecursionBasics {
 
         return x * power(x, n-1);
     }
+
+    //print x^n in O(logn)
+    public static int optimizedPower(int a, int n) {
+        if(n == 0) {
+            return 1;
+        }
+        int halfPower = optimizedPower(a, n/2);
+        int halfPowerSquare = halfPower * halfPower;
+
+        if(n % 2 != 0) {
+            halfPowerSquare = a * halfPowerSquare;
+        }
+
+        return halfPowerSquare;
+    }
     public static void main(String[] args) {
         // int n = 25;
         // int arr[] = {5, 6, 9};
@@ -107,6 +122,8 @@ public class RecursionBasics {
         // System.out.println(firstOccurence(arr, 5, 0));
         // System.out.println(lastOccurence(arr, 5, 0));
 
-        System.out.println(power(2, 10));
+        // System.out.println(power(2, 10));
+
+        System.out.println(optimizedPower(2, 10));
     }
 }
