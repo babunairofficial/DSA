@@ -84,6 +84,15 @@ public class RecursionBasics {
 
         return isFound;
     }
+
+    //calculate x^n
+    public static int power(int x, int n) {
+        if(n == 0) {
+            return 1;
+        }
+
+        return x * power(x, n-1);
+    }
     public static void main(String[] args) {
         // int n = 25;
         // int arr[] = {5, 6, 9};
@@ -94,8 +103,10 @@ public class RecursionBasics {
         // System.out.println(fib(n));
         // System.out.println(isSorted(arr, 0));
 
-        int arr[] = {8, 3, 6, 9, 5, 10, 2, 5, 3};
-        System.out.println(firstOccurence(arr, 5, 0));
-        System.out.println(lastOccurence(arr, 5, 0));
+        // int arr[] = {8, 3, 6, 9, 5, 10, 2, 5, 3};
+        // System.out.println(firstOccurence(arr, 5, 0));
+        // System.out.println(lastOccurence(arr, 5, 0));
+
+        System.out.println(power(2, 10));
     }
 }
