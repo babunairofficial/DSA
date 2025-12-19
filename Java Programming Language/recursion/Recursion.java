@@ -57,6 +57,7 @@ public class Recursion {
         // return friendsPairing(n-1) + (n-1) * friendsPairing(n-2);
     }
 
+    //print all binary string of size n without consecutive ones (1)
     public static void printBinstrings(int n, int lastPlace, String str) {
         if(n ==0) {
             System.out.println(str);
