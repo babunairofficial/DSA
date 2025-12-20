@@ -8,14 +8,14 @@ public class mergeSort {
         System.out.println();
     }
 
-    public static void mergeSort(int arr[], int si, int ei) {
+    public static void mergeSorting(int arr[], int si, int ei) {
         if(si >= ei) {
             return;
         }
 
         int mid = si + (ei - si)/2;
-        mergeSort(arr, si, mid); //left part
-        mergeSort(arr, mid+1, ei); //right part
+        mergeSorting(arr, si, mid); //left part
+        mergeSorting(arr, mid+1, ei); //right part
         merge(arr, si, mid, ei);
     }
 
@@ -51,7 +51,7 @@ public class mergeSort {
     }
     public static void main(String[] args) {
         int arr[] = {6, 3, 9, 5, 2, 8};
-        mergeSort(arr, 0, arr.length-1);
+        mergeSorting(arr, 0, arr.length-1);
         printArr(arr);
     }
 }
