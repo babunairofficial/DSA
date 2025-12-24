@@ -27,12 +27,23 @@ public class PracticeQuestion12 {
         System.out.print(digits[lastDigit] + " ");
     }
     
-
+    //question 3
+    public static int length(String str) {
+        if(str.length() == 0) {
+            return 0;
+        }
+        return length(str.substring(1)) + 1;
+    }
+    
     public static void main(String[] args) {
         int arr[] = {3, 2, 4, 5, 6, 2, 7, 2, 2};
         int key = 2;
         allOccurences(arr, key, 0);
         System.out.println();
         printDigits(1234);
+        System.out.println();
+
+        String str = "abcde";
+        System.out.println(length(str));
     }
 }
