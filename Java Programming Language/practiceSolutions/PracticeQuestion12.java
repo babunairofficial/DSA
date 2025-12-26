@@ -50,7 +50,21 @@ public class PracticeQuestion12 {
         }
         return res;
     }
-        
+
+    //question 5
+    public static void towerOfHanoi(int n, String src, String helper, String dest) {
+        if(n == 1) {
+            System.out.println("transfer disk " + n + " from " + src + " to " + dest);
+            return;
+        }
+        //transfer top n-1 from src to helper using dest as 'helper'
+        towerOfHanoi(n-1, src, dest, helper);
+        //transfer nth from src to dest
+        System.out.println("transfer disk " + n + " from " + src + " to " + helper);
+        //transfer n-1 from helper to dest using src as 'helper'
+        towerOfHanoi(n-1, helper, src, dest);
+    }
+            
     
     public static void main(String[] args) {
         // int arr[] = {3, 2, 4, 5, 6, 2, 7, 2, 2};
@@ -63,8 +77,11 @@ public class PracticeQuestion12 {
         // String str = "abcde";
         // System.out.println(length(str));
 
-        String str = "abcab";
-        int n = str.length();
-        System.out.print(countSubstrs(str, 0, n-1, n));
+        // String str = "abcab";
+        // int n = str.length();
+        // System.out.print(countSubstrs(str, 0, n-1, n));
+
+        int n = 4;
+        towerOfHanoi(n, "A", "B", "C");
     }
 }
